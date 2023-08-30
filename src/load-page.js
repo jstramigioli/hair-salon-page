@@ -1,5 +1,5 @@
 
-const loadIndex = function ()
+const loadPage = function ()
 {// Crear el elemento div con el id "content"
 const contentDiv = document.createElement('div');
 contentDiv.id = 'content';
@@ -39,7 +39,7 @@ mainContentDiv.id = 'main-content';
 // Crear el título h1
 const titleH1 = document.createElement('h1');
 titleH1.id = 'title';
-titleH1.textContent = 'Germán y Bibiana Coiffeur asdfas';
+titleH1.textContent = 'Germán y Bibiana Coiffeur';
 
 // Crear las decoraciones con las clases "decoration" y "square"
 const dec1Div = document.createElement('div');
@@ -79,6 +79,8 @@ homeImg.id = 'home-img';
 homeImg.src = '../src/img/ropa1.jpg';
 homeImg.alt = 'Ropa confeccionada a mano';
 
+textContentDiv.dataset.currentPage = 'home'
+
 // Agregar elementos a la estructura
 textContentDiv.appendChild(header);
 textContentDiv.appendChild(catalogoBtn);
@@ -87,6 +89,7 @@ mainContentDiv.appendChild(dec1Div);
 mainContentDiv.appendChild(p);
 mainContentDiv.appendChild(dec2Div);
 textContentDiv.appendChild(mainContentDiv);
+textContentDiv.appendChild(sideBarDiv)
 
 imgContentDiv.appendChild(homeImg);
 
@@ -96,6 +99,7 @@ contentDiv.appendChild(imgContentDiv);
 // Agregar la estructura completa al documento
 document.body.appendChild(contentDiv);
 
+
 }
 
-export {loadIndex}
+export { loadPage }
