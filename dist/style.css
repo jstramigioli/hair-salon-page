@@ -274,3 +274,53 @@ p {
     justify-self: flex-end;
     justify-content: center;
 }
+
+
+/*Contact*/
+
+#text-area-title {
+    align-self: flex-start;
+}
+
+#mensaje {
+    background-color: var(--pink);
+    color: var(--white);
+    border-style: none;
+    width: 100%;
+    height: 12em;
+    font-size: 0.4rem;
+    padding: 1em;
+}
+
+#mensaje::placeholder {
+    color: var(--white);
+}
+
+#mensaje:focus {
+    border-style: none;
+    outline: none;
+}
+
+#main-content > button {
+    background-color: var(--pink);
+    color: var(--white);
+    border-style: none;
+    width: 100%;
+    font-family: var(--main-font);
+    font-size: 0.5rem;
+}
+
+#contact-data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.3rem;
+    color: var(--pink);
+}

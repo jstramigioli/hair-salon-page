@@ -1,6 +1,10 @@
+import portada from './img/ropa1.jpg'
+import { updateSquares } from './squares-bar'
+
 function loadHome() {
     const textContent = document.querySelector('#text-content')
     let mainContentDiv
+    updateSquares()
 
 if (document.querySelector('#main-content') == null ) {
     mainContentDiv = document.createElement('div');
@@ -14,6 +18,8 @@ else {mainContentDiv = document.querySelector('#main-content')}
 if (textContent.dataset.currentPage != 'home') {
 
     textContent.dataset.currentPage = 'home'
+
+    mainContentDiv.innerHTML = ''
 
 // Crear el título h1
 const titleH1 = document.createElement('h1');
@@ -52,7 +58,7 @@ mainContentDiv.appendChild(dec2Div);
 // Crear la imagen
 const homeImg = document.createElement('img');
 homeImg.id = 'home-img';
-homeImg.src = '../src/img/ropa1.jpg';
+homeImg.src = portada;
 homeImg.alt = 'Ropa confeccionada a mano';
 
 const imgContentDiv = document.createElement('div');

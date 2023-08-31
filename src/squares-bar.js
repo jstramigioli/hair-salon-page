@@ -36,4 +36,4 @@ const addSquares = () => {
     window.addEventListener('resize', updateSquares)
 }
 
-export default addSquares
+export { addSquares , updateSquares }

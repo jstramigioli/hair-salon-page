@@ -1,3 +1,4 @@
+import portada from './img/ropa1.jpg'
 
 const loadPage = function ()
 {// Crear el elemento div con el id "content"
@@ -76,7 +77,8 @@ imgContentDiv.id = 'img-content';
 // Crear la imagen
 const homeImg = document.createElement('img');
 homeImg.id = 'home-img';
-homeImg.src = '../src/img/ropa1.jpg';
+
+homeImg.src = portada;
 homeImg.alt = 'Ropa confeccionada a mano';
 
 textContentDiv.dataset.currentPage = 'home'

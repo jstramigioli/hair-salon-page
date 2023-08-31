@@ -2,6 +2,7 @@ const catalogBrowserDiv = document.createElement('div')
 catalogBrowserDiv.id = 'catalog-browser'
 
 import { catalog } from './catalog.js'
+import { updateSquares } from './squares-bar'
 
 
 function addArticleToBrowser(article) {
@@ -11,7 +12,7 @@ function addArticleToBrowser(article) {
 
     const articleImg = document.createElement('img')
     articleImg.classList.add('article-img');
-    articleImg.src = `../src/img/${article.name}.jpg`;
+    articleImg.src = article.img;
     articleImg.alt = article.name;
 
     articleDiv.appendChild(articleImg);
@@ -38,6 +39,7 @@ function updtArticleHandler(event) {
 }
 
 function updateSelectedArticle(article) {
+    updateSquares()
     const content = document.querySelector('#content')
     const selectedArticleContainer = document.createElement('div')
     selectedArticleContainer.id = 'selected-article-container'
@@ -80,6 +82,9 @@ function updateSelectedArticle(article) {
     content.replaceChild(selectedArticleContainer, content.children[1])
 }
 
-const updateBrowserExporter = () => {updateBrowser(catalog)}
+const updateBrowserExporter = () => {
+    updateBrowser(catalog)
+    updateSquares()
+}
 
 export { updateBrowserExporter as updateBrowser }
