@@ -50,7 +50,7 @@ function updateSelectedArticle(article) {
 
     const artImg = document.createElement('img')
     artImg.classList.add('selected-article-img')
-    artImg.src = `../src/img/${article.name}.jpg`;
+    artImg.src = article.img;
     artImg.alt = article.name
     
     const artDescription = document.createElement('p')
